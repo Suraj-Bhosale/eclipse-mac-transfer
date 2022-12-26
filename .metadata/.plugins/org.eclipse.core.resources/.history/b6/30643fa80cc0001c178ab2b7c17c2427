@@ -1,0 +1,77 @@
+package stack;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class LargestParenthesis {
+
+	public static void main(String[] args) {
+		String exp = ")()())";
+		if(checker(exp)) {
+			System.out.println("True");
+			
+		}
+		else {
+			
+			System.out.println("False");
+		}
+
+	}
+
+	private static boolean checker(String exp) {
+		
+		Deque<Character> dq = new ArrayDeque <Character> ();
+		
+		for(int i = 0; i < exp.length(); i++) {
+			
+			char a = exp.charAt(i);
+			
+			if(a == '{' || a == '[' || a == '('){
+				dq.push(a);
+				continue;
+			}
+			
+//			if(dq.isEmpty()) {
+//				return false;
+//			}
+			
+			char check;
+			
+			switch(a) {
+			
+				case ')': 
+					if(dq.isEmpty()) {
+						continue;
+					}
+					check = dq.pop();
+					if(check == '{' || check == '[') {
+						return false;
+					}
+					break;
+					
+				case '}': 
+					if(dq.isEmpty()) {
+						continue;
+					}
+					check = dq.pop();
+					if(check == '(' || check == '[') {
+						return false;
+					}
+					break;
+			
+				
+				case ']': 
+					if(dq.isEmpty()) {
+						continue;
+					}
+					check = dq.pop();
+					if(check == '(' || check == '{') {
+						return false;
+					}
+					break;
+			}
+		}
+		return (dq.isEmpty());
+	}
+
+}

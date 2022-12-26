@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Recursion.BinaryPractice.java&apos; to &apos;LinkedListPractice.java&apos;&#x0A;- Original project: &apos;Revision&apos;&#x0A;- Original element: &apos;Recursion.BinaryPractice.java&apos;&#x0A;- Renamed element: &apos;Recursion.LinkedListPractice.java&apos;" description="Rename compilation unit &apos;BinaryPractice.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Recursion{BinaryPractice.java" name="LinkedListPractice.java" references="false" stamp="1659508911240" version="1.0"/>
+</session>

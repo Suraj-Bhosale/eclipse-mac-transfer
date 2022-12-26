@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Questions[DSA]&apos; to &apos;CodingBat[DSA]&apos;" description="Rename resource &apos;Questions[DSA]&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Questions[DSA]" name="CodingBat[DSA]" stamp="1652272279045" updateReferences="true"/>
+</session>

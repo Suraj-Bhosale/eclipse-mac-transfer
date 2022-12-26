@@ -1,0 +1,16 @@
+package String;
+
+public class Remove_All_Occurrences_Of_Substring {
+
+	public static void main(String[] args) {
+		String s = "daabcbaabcbc", part = "abc";
+		String ans = "";
+		while(s.contains(part)) {
+			 s = s.replaceAll(part, "");
+			//int idx = s.indexOf(part);
+		}
+
+		System.out.println(s);
+	}
+
+}

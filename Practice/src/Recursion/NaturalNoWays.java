@@ -1,0 +1,29 @@
+package Recursion;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class NaturalNoWays
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scan = new Scanner(System.in);
+        int no = scan.nextInt();
+        int ans = logic(no,1);
+        System.out.print(ans);
+	}
+
+    static int logic(int no, int start){
+      if(no == 0){
+        return 1;
+      }
+      int ans = 0;
+      for(int i = start; i <= no; i++){
+        ans += logic(no-i, i + 1);
+        System.out.print(ans);
+      }
+
+      return ans;
+    }
+}

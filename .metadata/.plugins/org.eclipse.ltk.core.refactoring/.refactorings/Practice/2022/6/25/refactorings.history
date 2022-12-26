@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;binary_Tree.Delete&apos; to &apos;Delete_Node&apos;&#x0A;- Original project: &apos;Practice&apos;&#x0A;- Original element: &apos;binary_Tree.Delete&apos;&#x0A;- Renamed element: &apos;binary_Tree.Delete_Node&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Delete&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;binary_Tree{Delete.java[Delete" matchStrategy="1" name="Delete_Node" qualified="false" references="true" similarDeclarations="false" stamp="1655126145815" textual="false" version="1.0"/>
+</session>

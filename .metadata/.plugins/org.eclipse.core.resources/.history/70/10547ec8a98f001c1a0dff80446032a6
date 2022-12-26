@@ -1,0 +1,28 @@
+package Oops;
+import java.util.Scanner;
+public class Patterns {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		int no = 121;
+		int rem = 0; int originalNo = no; 
+		int result = 0;
+		
+		while(no != 0) {
+			rem = rem % 10;
+			result = (result * 10) + rem;
+			no = no/10;
+		}
+		if(originalNo == result) {
+			System.out.println("Palindrome");
+		}
+		else {
+			System.out.println("Not Palindrome");
+		}
+
+		
+
+	}
+
+}

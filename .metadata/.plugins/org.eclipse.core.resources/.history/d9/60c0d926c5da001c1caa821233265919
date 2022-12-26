@@ -1,0 +1,74 @@
+package random;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class hash {
+
+//
+//	    public static void characterCount(String inputString)
+//	    {
+//	        // Creating a HashMap containing char
+//	        // as a key and occurrences as  a value
+//	        HashMap<Character, Integer> charCountMap
+//	            = new HashMap<Character, Integer>();
+//	 
+//	   
+//	 
+//	        char[] strArray = inputString.toCharArray();
+//	 
+//	        // checking each char of strArray
+//	        for (char c : strArray) {
+//	            if (charCountMap.containsKey(c)) {
+//
+//	                charCountMap.put(c, charCountMap.get(c) + 1);
+//	            }
+//	            else {
+//	 
+//	
+//	                charCountMap.put(c, 1);
+//	            }
+//	        }
+//	 
+//	      
+//	        for (Map.Entry entry : charCountMap.entrySet()) {
+//	            System.out.println(entry.getKey() + " " + entry.getValue());
+//	        }
+//	    }
+	 
+
+	    	public static void main(String[] args) throws java.lang.Exception {
+	            Scanner scanner = new Scanner(System.in);
+
+	            int k = Integer.parseInt(scanner.nextLine());
+	            String str = scanner.nextLine();
+
+	            char ans = ' ';
+	            
+	            HashMap<Character, Integer> map = new HashMap<>();
+	            for (int i = 0; i < str.length(); i++) {
+	                char ch = str.charAt(i);
+
+	                if(!map.containsKey(ch)) {
+	                    map.put(ch, 1);
+	                } else {
+	                    map.put(ch, map.get(ch) + 1);
+	                    if (map.get(ch) >= k) {
+	                        System.out.println(ch);
+	                    }
+	                }
+	            }
+
+	            for (int i = 0; i < str.length(); i++) {
+	                char ch = str.charAt(i);
+
+	               if (map.get(ch) >= k) {
+	                   ans = ch;
+	                   break;
+	               }
+	            }
+	            System.out.println(ans);
+	        }
+	  
+}

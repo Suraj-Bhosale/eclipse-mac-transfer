@@ -1,0 +1,28 @@
+package Oops;
+import java.util.Scanner;
+public class Patterns {
+
+	public static void main(String[] args) {
+		//Scanner scan = new Scanner(System.in);
+
+		int no = 1;
+		int rem = 0; int originalNo = no; 
+		int result = 0;
+		
+		while(originalNo != 0) {
+			rem = originalNo % 10;
+			result = (int) Math.pow(rem,3) + result;
+			originalNo = originalNo/10;
+		}
+		if(no == result) {
+			System.out.println("Armstrong");
+		}
+		else {
+			System.out.println("Not Armstrong");
+		}
+
+		
+
+	}
+
+}

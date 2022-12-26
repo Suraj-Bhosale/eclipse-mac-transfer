@@ -1,0 +1,36 @@
+package Recursion;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class HelloRcur
+{
+	public static void main (String[] args) throws java.lang.Exception
+  {     
+
+	
+        int n = 6;
+        
+    
+               
+         	  System.out.println(fibonacci(n));
+            	   
+       
+	}
+
+	public static int fibonacci(int n)
+	{
+		if(n < 2) {
+			return n;
+		}
+		
+		int a = fibonacci(n-2);
+		System.out.print(a+" ");
+		int b= fibonacci(n-1);
+		System.out.println();
+		System.out.print(b+" ");
+		return a + b;
+	}
+
+}

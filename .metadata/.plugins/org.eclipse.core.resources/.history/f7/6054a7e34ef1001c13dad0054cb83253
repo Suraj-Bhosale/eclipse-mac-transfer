@@ -1,0 +1,187 @@
+package Recursion;
+
+import java.util.*;
+
+
+
+import java.lang.*;
+import java.io.*;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+ class LinkedListPractice {
+	 
+	 static int size = 0;
+	 Node head;
+	 class Node{
+		 int data;
+		 Node next;
+		 Node(int data){
+			 this.data = data;
+			 this.next = null;
+			 size++;
+		 }
+	 }
+	 
+	 void addFirst(int data) {
+		 Node newNode = new Node(data);
+		 if(head == null) {
+			 head = newNode;
+			 return;
+		 }
+		 
+		 newNode.next = head;
+		 head = newNode;
+	 }
+	 
+	 void addLast(int data) {
+		 Node newNode = new Node(data);
+		 if(head == null) {
+			 head = newNode;
+			 return;
+		 }
+		 
+		 Node curr = head;
+		 while(curr.next != null) {
+			 curr = curr.next;
+		 }
+		 
+		 curr.next = newNode;
+		 newNode.next = null;
+	 }
+	 
+	 void deleteFirst() {
+		 if(head ==null) {
+			 return;
+		 }
+		 size--;
+		 head = head.next;
+	 }
+	 
+		private void deleteLast() {
+			 if(head ==null) {
+				 return;
+			 }
+			 size--;
+			 Node curr = head;
+			 while(curr.next.next != null) {
+				 curr = curr.next;
+			 }
+			curr.next = null;
+		}
+		
+		void print() {
+			if(head == null) {
+				return;
+			}
+			
+			Node curr = head;
+			while(curr != null) {
+				System.out.print(curr.data+" -> ");
+				curr = curr.next;
+			}
+			
+			System.out.println("NULL");
+		}
+		
+		Node reverse() {
+			if(head == null || head.next == null) {
+				return head;
+			}
+			
+			Node prev = null;
+			Node curr = head;
+			Node nextNode = null;
+			while(curr != null) {
+				nextNode = curr.next;
+				curr.next = prev;
+				
+				prev = curr;
+				curr = nextNode;
+			}
+			
+			//head.next = null;
+			head = prev;
+			return head;
+		}
+		
+		void deleteMiddle() {
+		  if(head == null || head.next == null) {
+			  return;
+		  }
+			int s = 0;
+			int e = size;
+			int mid = s + (e - s)/2;
+			int i = 1;
+			int targetIdx = mid;
+			Node curr = head;
+			while(i < targetIdx) {
+				curr = curr.next;
+				i++;
+			}
+			curr.next = curr.next.next;
+			
+		}
+		
+		void addBetween(int data, int pos) {
+			Node newNode = new Node(data);
+			
+			if(head == null) {
+				head = newNode;
+				return;
+			}
+			
+			Node curr = head;
+			int i = 1;
+			while(i < pos) {
+				curr = curr.next;
+				i++;
+			}
+			
+			//curr.next = newNode;
+			newNode.next = curr.next;
+			curr.next = newNode;
+		}
+		
+		void removeDublicate() {
+			Node curr = head;
+			int temp = curr.data;
+			
+			while(curr.next != null) {
+				if(curr.next.data == temp) {
+					curr.next = curr.next.next;
+				}
+				curr = curr.next;
+			}
+		}
+		
+	 public static void main(String[] args) {
+		 LinkedListPractice ll = new LinkedListPractice();
+		 ll.addFirst(1);
+		 ll.addFirst(2);
+		 ll.addFirst(2);
+		 ll.addFirst(5);
+		 ll.removeDublicate();
+		// ll.addBetween(3, 2);
+//    	 ll.addLast(0);
+//		 ll.addLast(-1);
+		// ll.print();
+		// System.out.println();
+		// ll.deleteMiddle();
+//		 ll.deleteFirst();
+//		 ll.deleteLast();
+//		 ll.deleteLast();
+	  // Node ans = ll.reverse();
+	    // System.out.print(ans.data +" ");
+		ll.print();
+	 }
+
+
+ }
+ 
+
+ 
+
+ 
